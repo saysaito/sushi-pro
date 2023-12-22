@@ -35,28 +35,218 @@
             <h2>プログラミング基礎</h2>
             <article class="topic">
                 <h3>変数</h3>
+                <p>変数は、データを格納するための名前付きのコンテナです。プログラム内で使用されるデータに名前を付け、簡単にアクセス、変更することができます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
                 <div class="detail" style="display:none;">
-                <p>変数はデータを格納するためのコンテナです。以下は変数の使用例です。</p>
-                
-                <h4>Python</h4>
-                <button class="copy-btn">コピー</button>
-                <pre><code>
-            number = 10
-            name = "すしプロ"
+                    <p>以下の例では、すしのネタとその価格を変数に格納し、それらを出力しています。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>sushi_neta = "まぐろ"
+            sushi_price = 200
             
-            print(number)  # 10を出力
-            print(name)    # "すしプロ"を出力</code></pre>
-                <h4>JavaScript</h4>
-                <button class="copy-btn">コピー</button>       
-                <pre><code>// JavaScriptでの変数の例
+            print(f"ネタ: {sushi_neta}, 価格: {sushi_price}円")</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>let sushiNeta = "サーモン";
+            let sushiPrice = 180;
             
-            let number = 10;
-            let name = "すしプロ";
-            
-            console.log(number); // 10を出力
-            console.log(name);   // "すしプロ"を出力</code></pre>
+            console.log(`ネタ: ${sushiNeta}, 価格: ${sushiPrice}円`);</code></pre>
+                    </div>
                 </div>
             </article>
+            
+            <article class="topic">
+                <h3>関数</h3>
+                <p>関数は、特定のタスクを実行するためのコードのブロックです。一度定義すると、何度でも再利用できます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、すしネタが2貫提供される場合の価格を計算する関数を定義しています。この関数は、一貫あたりの価格を引数として受け取り、2貫の合計価格を返します。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>def calculate_price_per_two_pieces(price_per_piece):
+                return price_per_piece * 2
+            
+            maguro_price = 200
+            total_price = calculate_price_per_two_pieces(maguro_price)
+            print(f"まぐろ2貫の価格: {total_price}円")</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>function calculatePricePerTwoPieces(pricePerPiece) {
+                return pricePerPiece * 2;
+            }
+            
+            let salmonPrice = 180;
+            let totalPrice = calculatePricePerTwoPieces(salmonPrice);
+            console.log(`サーモン2貫の価格: ${totalPrice}円`);</code></pre>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="topic">
+                <h3>リスト</h3>
+                <p>リスト（または配列）は、順序付けられた要素のコレクションです。各要素はインデックスによってアクセスされます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、さまざまなすしネタをリストで管理しています。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>sushi_neta_list = ["まぐろ", "サーモン", "えび", "うなぎ"]
+            print(sushi_neta_list)</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>let sushiNetaArray = ["マグロ", "サーモン", "エビ", "ウナギ"];
+            console.log(sushiNetaArray);</code></pre>
+                    </div>
+                </div>
+            </article>
+            <article class="topic">
+                <h3>辞書（オブジェクト）</h3>
+                <p>辞書（オブジェクト）は、キーと値のペアでデータを管理する構造です。各要素には一意のキーによってアクセスされます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、さまざまなすしネタとそれぞれの価格を辞書で管理しています。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>sushi_menu = {
+                "まぐろ": 200,
+                "サーモン": 180,
+                "えび": 150,
+                "うなぎ": 300
+            }
+            print(sushi_menu)</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>let sushiMenu = {
+                "マグロ": 200,
+                "サーモン": 180,
+                "エビ": 150,
+                "ウナギ": 300
+            };
+            console.log(sushiMenu);</code></pre>
+                    </div>
+                </div>
+            </article>
+            <article class="topic">
+                <h3>ループ処理</h3>
+                <p>ループ処理を使用すると、コレクション（リストや配列など）の各要素に対して繰り返し操作を行うことができます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、すしネタのリストをループして、それぞれのネタを出力しています。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>sushi_neta_list = ["まぐろ", "サーモン", "えび", "うなぎ"]
+            for neta in sushi_neta_list:
+                print(f"すしネタ: {neta}")</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>let sushiNetaArray = ["マグロ", "サーモン", "エビ", "ウナギ"];
+            sushiNetaArray.forEach(neta => {
+                console.log(`すしネタ: ${neta}`);</code></pre>
+                    </div>
+                </div>
+            </article>
+            <article class="topic">
+                <h3>条件分岐</h3>
+                <p>条件分岐を使用すると、特定の条件に基づいて異なるコードブロックを実行することができます。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、すしネタが高級ネタリストに含まれているかどうかに基づいて異なるメッセージを出力します。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>高級ネタ = ["うに", "いくら", "トロ"]
+            sushi_neta = "うに"
+            
+            if sushi_neta in 高級ネタ:
+                print(f"{sushi_neta}は高級ネタです！")
+            else:
+                print(f"{sushi_neta}は一般的なネタです。")</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>const 高級ネタ = ["うに", "いくら", "トロ"];
+            let sushiNeta = "いくら";
+            
+            if (高級ネタ.includes(sushiNeta)) {
+                console.log(`${sushiNeta}は高級ネタです！`);
+            } else {
+                console.log(`${sushiNeta}は一般的なネタです。`);</code></pre>
+                    </div>
+                </div>
+            </article>
+            <article class="topic">
+                <h3>クラスとインスタンス</h3>
+                <p>クラスは、オブジェクトの設計図のようなもので、属性とメソッドを定義します。インスタンスはクラスに基づいて作成される具体的なオブジェクトです。</p>
+                <button class="toggle-detail-btn">詳細を表示</button>
+                <div class="detail" style="display:none;">
+                    <p>以下の例では、「Sushi」というクラスを定義し、さまざまなすしネタ（まぐろ、サーモン、うに）のインスタンスを作成しています。各インスタンスは、ネタの種類、価格、スタイル、最適な季節という属性を持っています。</p>
+                    <div class="code-block">
+                        <h4>Python</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>class Sushi:
+                def __init__(self, neta, price, style, season):
+                    self.neta = neta
+                    self.price = price
+                    self.style = style
+                    self.season = season
+            
+                def describe(self):
+                    print(f"この{neta}は{self.price}円です。スタイル: {self.style}、最適な季節: {self.season}")
+            
+            maguro = Sushi("まぐろ", 200, "握り", "冬")
+            salmon = Sushi("サーモン", 180, "刺身", "秋")
+            uni = Sushi("うに", 400, "軍艦", "夏")
+            
+            maguro.describe()
+            salmon.describe()
+            uni.describe()</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <h4>JavaScript</h4>
+                        <button class="copy-btn">コピー</button>
+                        <pre><code>class Sushi {
+                constructor(neta, price, style, season) {
+                    this.neta = neta;
+                    this.price = price;
+                    this.style = style;
+                    this.season = season;
+                }
+            
+                describe() {
+                    console.log(`この${this.neta}は${this.price}円です。スタイル: ${this.style}、最適な季節: ${this.season}`);
+                }
+            }
+            
+            const maguro = new Sushi("マグロ", 200, "握り", "冬");
+            const salmon = new Sushi("サーモン", 180, "刺身", "秋");
+            const uni = new Sushi("うに", 400, "軍艦", "夏");
+            
+            maguro.describe();
+            salmon.describe();
+            uni.describe();</code></pre>
+                    </div>
+                </div>
+            </article>
+            
+                                                     
+            
+            
             
 
                 <!-- 他のトピック -->

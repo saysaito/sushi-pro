@@ -17,25 +17,20 @@ document.getElementById('quiz-form').addEventListener('submit', function(e) {
 
 
 
-document.querySelectorAll('.topic').forEach(item => {
-  item.addEventListener('click', () => {
-      // 詳細な説明を表示/非表示の切り替え
-      const detail = item.querySelector('.detail');
-      if (detail.style.display === 'none') {
-          detail.style.display = 'block';
+document.querySelectorAll('.toggle-detail-btn').forEach(button => {
+  button.addEventListener('click', function() {
+      const detailDiv = this.nextElementSibling;
+      if (detailDiv.style.display === 'none') {
+          detailDiv.style.display = 'block';
+          this.textContent = '詳細を隠す';
       } else {
-          detail.style.display = 'none';
+          detailDiv.style.display = 'none';
+          this.textContent = '詳細を表示';
       }
   });
 });
 
-
-document.querySelectorAll('.show-code-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-      const codeBlock = btn.nextElementSibling; // 仮にコードブロックがボタンの直後にあると仮定
-      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
-  });
-});document.querySelectorAll('.copy-btn').forEach(button => {
+document.querySelectorAll('.copy-btn').forEach(button => {
   button.addEventListener('click', function() {
       const code = this.nextElementSibling.textContent;
       navigator.clipboard.writeText(code).then(() => {
