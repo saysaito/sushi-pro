@@ -30,3 +30,21 @@ document.querySelectorAll('.topic').forEach(item => {
 });
 
 
+document.querySelectorAll('.show-code-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+      const codeBlock = btn.nextElementSibling; // 仮にコードブロックがボタンの直後にあると仮定
+      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
+  });
+});document.querySelectorAll('.copy-btn').forEach(button => {
+  button.addEventListener('click', function() {
+      const code = this.nextElementSibling.textContent;
+      navigator.clipboard.writeText(code).then(() => {
+          alert('コードがクリップボードにコピーされました！');
+      }).catch(err => {
+          console.error('コピーに失敗しました: ', err);
+      });
+  });
+});
+
+
+
