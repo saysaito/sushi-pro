@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>すしプロ - プログラミングを学ぶ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>すしプロ - プログラミングの基本</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>はじめに</h2>
+            <p>プログラミング初心者のための基本的な概念を学びます。</p>
+        </section>
+        <!-- 他のセクション（例えば、変数、リスト、クラスなど）をここに追加 -->
+        <section id="quiz-section">
+            <h2>クイズ</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <p>プログラミング言語は何ですか？</p>
+                    <input type="radio" id="python" name="q1" value="python">
+                    <label for="python">Python</label><br>
+                    <input type="radio" id="javascript" name="q1" value="javascript">
+                    <label for="javascript">JavaScript</label><br>
+                </div>
+                <!-- 他の質問を追加 -->
+                <input type="submit" value="回答">
+            </form>
+            <div id="quiz-result"></div>
+        </section>
+
+        <section id="explanation">
+            <h2>プログラミング基礎</h2>
+            <article class="topic">
+                <h3>変数</h3>
+                <div class="detail" style="display:none;">
+                    <p>変数はデータを格納するためのコンテナです。...</p>
+                    <!-- その他の詳細な説明 -->
+                </div>
+            </article>
+ 
+                <article class="topic">
+                    <h3>関数</h3>
+                    <div class="detail" style="display:none;">
+                        <p>関数は、特定のタスクを実行するためのコードのブロックです。一度定義すると、何度でも呼び出すことができます。</p>
+                        <!-- その他の詳細な説明 -->
+                    </div>
+                </article>
+                <!-- 他のトピック -->
+            </section>
+            <!-- 他のトピック -->
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 すしプロ</p>
+    </footer>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
